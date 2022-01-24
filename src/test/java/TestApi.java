@@ -30,7 +30,7 @@ import static com.lhl.gitlab.RestHttpUtils.doGet;
 public class TestApi {
 
     //本地基础路径
-    public static final String BASE_PATH = "F:\\workspace-jinjucartoon\\";
+    public static final String BASE_PATH = "F:\\ql-workspace\\";
 
     //切换分支名
     public static final String CHECKOUT_BRANCH_NAME = "dev";
@@ -44,7 +44,7 @@ public class TestApi {
     //生成文件名称
     public static final String FILE_NAME = "项目统计.xlsx";
     //指定项目路径
-    public static final String GITPATH = "saas";
+    public static final String GITPATH = "ql-admin";
 
     //g'i't 账号密码
     public static final String USERNAME = "shik@chimu18.com.cn";
@@ -124,7 +124,7 @@ public class TestApi {
 
         // 赤木漫画saas项目GroupId设置
         List<String> groupIdList2 = new ArrayList<>();
-        groupIdList2.add("35");
+        groupIdList2.add("80");
         List<JSONObject> allProject = getProject(groupIdList2);
         allProject.stream().forEach(project -> {
             File file = new File(BASE_PATH + project.getString("path_with_namespace").replace("/", "\\"));
